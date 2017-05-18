@@ -1,0 +1,11 @@
+---
+
+  - name: Install mysql {{ mysql_version }}
+    apt: pkg={{ item }} state=installed force=yes
+    with_items:
+      - mysql-server-{{ mysql_version }}
+      - mysql-client-{{ mysql_version }}
+      - python-mysqldb
+
+  - name: Start mysql service
+    service: name=mysql state=started

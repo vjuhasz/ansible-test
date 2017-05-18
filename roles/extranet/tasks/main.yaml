@@ -1,0 +1,6 @@
+---
+
+- name: touch label
+  file: path=/tmp/{{ extranet.server_name }} state=touch
+
+

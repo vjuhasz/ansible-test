@@ -1,0 +1,24 @@
+---
+
+app_v1:
+  intranet: 
+    apache_server_name: 
+      dev: 'intranet.dev.thirdbridge.com'
+      qa: 'intranet.qa.thirdbridge.com'
+      stag: 'intranet.stag.thirdbridge.com'
+      prod: 'intranet.thirdbridge.com'
+    db_host:
+      dev: 'db.dev.thirdbridge.com'
+      qa: 'db.qa.thirdbridge.com'
+      stag: 'db.stag.thirdbridge.com'
+      prod: 'db.prod.thirdbridge.com'
+
+  extranet:
+    apache_server_name:
+        dev: 'extranet.dev.thirdbridge.com'
+        qa: 'extranet.qa.thirdbridge.com'
+        stag: 'extranet.stag.thirdbridge.com'
+        prod: 'extranet.thirdbridge.com'
+
+
+

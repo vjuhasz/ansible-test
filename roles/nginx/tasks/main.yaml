@@ -1,0 +1,7 @@
+---
+
+- name: touch label
+  file: path=/tmp/{{ domain }} state=touch
+
+- name: Create vhost folder
+  file: path=/tmp/{{ vhost }} state=directory

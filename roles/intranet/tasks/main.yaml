@@ -1,0 +1,7 @@
+---
+
+- name: touch label
+  file: path=/tmp/{{ intranet.server_name }} state=touch
+
+- name: touch label
+  file: path=/tmp/{{ intranet.db_host }} state=touch

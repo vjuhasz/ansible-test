@@ -1,0 +1,40 @@
+---
+
+- name: Install nginx and supporting packages
+  become: yes
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - nginx
+    - nginx-extras
+
+- name: Create includes directory for nginx
+  become: yes
+  file:
+    path: /etc/nginx/includes
+    state: directory
+
+- name: Remove default site
+  become: yes
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - /etc/nginx/sites-enabled/default
+    - /etc/nginx/sites-available/default
+
+- name: Copy ssl certificates
+  become: yes
+  copy:
+    src: "{{ item }}"
+    dest: /etc/nginx/ssl/
+  with_fileglob: "ssl/{{ nginx.ssl_certificates }}/*"
+
+- name: Configure nginx service
+  become: yes
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify:
+    - reload nginx
