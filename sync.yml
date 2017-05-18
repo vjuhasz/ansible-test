@@ -1,0 +1,9 @@
+---
+- hosts: "{{ target }}"
+  tasks:
+    - name: Transfer file from ServerA to ServerB
+      synchronize:
+        #mode: pull
+        src: /tmp/folder
+        dest: /tmp/
+      delegate_to: "{{ source }}"

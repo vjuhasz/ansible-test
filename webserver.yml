@@ -9,14 +9,14 @@
 #    - "/vars/secrets.yml"
 
   roles: 
-    - role: intranet
-      intranet: 
-        server_name: "{{ app_v1.intranet.apache_server_name[env] }}"
-        db_host: "{{ app_v1.intranet.db_host[env] }}"
+#    - role: intranet
+#      intranet: 
+#        server_name: "{{ app_v1.intranet.apache_server_name[env] }}"
+#        db_host: "{{ app_v1.intranet.db_host[env] }}"
  
-    - role: extranet 
-      extranet: 
-        server_name: "{{ app_v1.extranet.apache_server_name[env] }}"
+#    - role: extranet 
+#      extranet: 
+#        server_name: "{{ app_v1.extranet.apache_server_name[env] }}"
         
     - role: website:
       website:
