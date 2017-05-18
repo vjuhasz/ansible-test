@@ -21,4 +21,7 @@ app_v1:
         prod: 'extranet.thirdbridge.com'
 
 
-
+website:
+  url: 
+    test: 'test.website.com'
+    prod: 'www.website.com'

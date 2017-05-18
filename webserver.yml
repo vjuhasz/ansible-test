@@ -18,5 +18,7 @@
       extranet: 
         server_name: "{{ app_v1.extranet.apache_server_name[env] }}"
         
-
+    - role: website:
+      website:
+        url: "{{ website.url[env] }}"
   

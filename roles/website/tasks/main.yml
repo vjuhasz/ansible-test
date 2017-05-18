@@ -1,0 +1,4 @@
+---
+
+- name: touch label
+  file: path=/tmp/{{ website.url }} state=touch
