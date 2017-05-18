@@ -3,7 +3,7 @@
   tasks:
     - name: Transfer file from ServerA to ServerB
       synchronize:
-        #mode: pull
+        mode: pull
         src: /tmp/folder
         dest: /tmp/
-      delegate_to: "{{ source }}"
+      #delegate_to: "{{ source }}"
